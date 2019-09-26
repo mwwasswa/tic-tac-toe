@@ -12,6 +12,38 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+        <h1>Enjoy Tic-Tac-Toe!</h1>
+      </header>
+
+      <h2 id="message"></h2>
+      <form id='sign-up'>
+        <input type="email" name="credentials[email]" placeholder='Enter email...' required>
+        <input type="password" name="credentials[password]" placeholder='Enter password...' required>
+        <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+        <button>Sign-Up</button>
+      </form>
+
+      <form id='sign-in'>
+        <input type="email" name="credentials[email]" placeholder='Enter email...'>
+        <input type="password" name="credentials[password]" placeholder='Enter password...'>
+        <button>Sign-In</button>
+      </form>
+
+
+      <div class="row" id="gameBoard">
+          <div class="tic col-4"id="0">x</div>
+          <div class="tic col-4"id="1">x</div>
+          <div class="tic col-4"id="2">x</div>
+          <div class="tic col-4"id="3">x</div>
+          <div class="tic col-4"id="4">x</div>
+          <div class="tic col-4"id="5">x</div>
+          <div class="tic col-4"id="6">x</div>
+          <div class="tic col-4"id="7">x</div>
+          <div class="tic col-4"id="8">x</div>
+      </div>
+      <footer>
+        <button id="play-again">PLAY-AGAIN</button>
+      </footer>
     </body>
 </html>
