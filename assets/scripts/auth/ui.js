@@ -28,6 +28,7 @@ const onSignUpFailure = function () {
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
   $('#message').css('color', 'green')
+  $('#sign-up, #sign-in').show()
 }
 
 const onSignOutFailure = function () {
@@ -39,6 +40,7 @@ const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
   store.user = responseData.user
   $('#message').css('color', 'green')
+  $('#sign-up, #sign-in').hide()
 }
 
 const onSignInFailure = function () {
