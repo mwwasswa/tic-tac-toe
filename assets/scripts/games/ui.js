@@ -16,8 +16,15 @@ const onNewGameSuccess = function (restartGame) {
   store.game = restartGame.game
 }
 
+const onGetRecordSuccess = function (records) {
+  $('.game-history').html(records.games.length)
+  console.log(records)
+  // store.game = records.game
+}
+
 module.exports = {
   onCreateGameSuccess,
   onBoardClickSuccess,
-  onNewGameSuccess
+  onNewGameSuccess,
+  onGetRecordSuccess
 }

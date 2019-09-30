@@ -27,11 +27,11 @@ const checkGame = function () {
     } else if (gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6] && gameBoard[2] !== '') {
       winCondition = true
     } else if (winCondition === false && turnCounter === 9) {
-      alert('Tie game!')
+      $('#game-notifications').text('Tie game!')
       return winCondition
     }
     if (winCondition === true) {
-      alert('Winner!')
+      $('#game-notifications').text('Winner!')
       return winCondition
     }
     turnCounter++
@@ -39,7 +39,7 @@ const checkGame = function () {
 }
 
 const boardClick = function (event) {
-  // check that the positino on the board is empty
+  // check that the position on the board is empty
   if ($(event.target).text() === '' && winCondition === false) {
     // get the position on the board that was clicked
     const position = event.target.id
@@ -56,9 +56,11 @@ const boardClick = function (event) {
         checkGame()
         // change turn
         if (currentPlayer === 'X') {
+          $('#game-notifications').text('Os turn')
           currentPlayer = 'O'
         } else {
           currentPlayer = 'X'
+          $('#game-notifications').text('Xs turn')
         }
       })
       .catch(ui.onBoardClickFailure)
@@ -81,8 +83,16 @@ const onCreateGame = function (event) {
 //     .catch(ui.onNewGameFailure)
 // }
 
+// to get get history.
+const onGameRecords = function (event) {
+  event.preventDefault()
+  api.getGame()
+    .then(ui.onGetRecordSuccess)
+    .catch(ui.onGetRecordFailure)
+}
 module.exports = {
   onCreateGame,
   boardClick,
+  onGameRecords
   // onPlayAgain
 }
