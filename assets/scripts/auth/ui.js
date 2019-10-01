@@ -3,6 +3,9 @@ const store = require('../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').html('')
+  }, 2000)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
   $('form').trigger('reset')
@@ -10,6 +13,9 @@ const successMessage = function (newText) {
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').html('')
+  }, 2000)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
   $('form').trigger('reset')
@@ -29,6 +35,11 @@ const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
   $('#message').css('color', 'green')
   $('#sign-up, #sign-in').show()
+  $('#gameBoard').hide()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#new-game').hide()
+  $('#game-records').hide()
 }
 
 const onSignOutFailure = function () {
@@ -41,6 +52,11 @@ const onSignInSuccess = function (responseData) {
   store.user = responseData.user
   $('#message').css('color', 'green')
   $('#sign-up, #sign-in').hide()
+  $('#gameBoard').show()
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#new-game').show()
+  $('#game-records').show()
 }
 
 const onSignInFailure = function () {

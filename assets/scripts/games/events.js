@@ -27,11 +27,11 @@ const checkGame = function () {
     } else if (gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6] && gameBoard[2] !== '') {
       winCondition = true
     } else if (winCondition === false && turnCounter === 9) {
-      $('#game-notifications').text('Tie game!')
+      $('#game-results').text('Tie game!')
       return winCondition
     }
     if (winCondition === true) {
-      $('#game-notifications').text('Winner!')
+      $('#game-results').text('Winner!')
       return winCondition
     }
     turnCounter++
