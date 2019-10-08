@@ -27,11 +27,13 @@ const checkGame = function () {
     } else if (gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6] && gameBoard[2] !== '') {
       winCondition = true
     } else if (winCondition === false && turnCounter === 9) {
+      winCondition = true
       $('#game-results').text('Tie game!')
       return winCondition
     }
     if (winCondition === true) {
-      $('#game-results').text('Winner!')
+      $('#game-results').text('Player ' + currentPlayer + ' wins')
+      // $('#game-notifications').text('Game Over')
       return winCondition
     }
     turnCounter++
@@ -53,14 +55,19 @@ const boardClick = function (event) {
         // save response
         ui.onBoardClickSuccess(response)
         // check for winner
-        checkGame()
+        const returnValueFromCheckGame = checkGame()
+        // console.log('return value is', returnValueFromCheckGame)
         // change turn
-        if (currentPlayer === 'X') {
+        if (currentPlayer === 'X' && winCondition === false) {
           $('#game-notifications').text('Os turn')
           currentPlayer = 'O'
-        } else {
+        } else if (currentPlayer === 'O' && winCondition === false) {
           currentPlayer = 'X'
           $('#game-notifications').text('Xs turn')
+        } else if (currentPlayer === 'X' && winCondition === true) {
+          $('#game-notifications').text('Game Over!')
+        } else {
+          $('#game-notifications').text('Game Over!')
         }
       })
       .catch(ui.onBoardClickFailure)
@@ -75,6 +82,7 @@ const onCreateGame = function (event) {
   api.createGame()
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
+  $('#gameBoard').show()
 }
 
 // const onPlayAgain = function (event) {

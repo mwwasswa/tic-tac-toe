@@ -40,6 +40,12 @@ const onSignOutSuccess = function () {
   $('#sign-out').hide()
   $('#new-game').hide()
   $('#game-records').hide()
+  $('#game-notifications').text('')
+  $('#game-notifications').hide()
+  $('#game-results').text('')
+  $('#game-results').hide()
+  $('.game-history').hide()
+  // $('#game-results').hide()
 }
 
 const onSignOutFailure = function () {
@@ -52,11 +58,13 @@ const onSignInSuccess = function (responseData) {
   store.user = responseData.user
   $('#message').css('color', 'green')
   $('#sign-up, #sign-in').hide()
-  $('#gameBoard').show()
+  // $('#gameBoard').show() gameBoard will display after the onCreateGame function runs in event.js
   $('#change-password').show()
   $('#sign-out').show()
   $('#new-game').show()
   $('#game-records').show()
+  $('#game-results').show()
+  $('#game-notifications').show()
 }
 
 const onSignInFailure = function () {
