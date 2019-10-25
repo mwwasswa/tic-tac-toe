@@ -25,13 +25,12 @@ Going into the project, I inevitably fell down the rabbit hole when I decided to
 - jQuery
 - HTML
 - CSS
--Sass
--Javascript
+- Sass
+- Javascript
 
 ## Wireframe
-[]('https://i.imgur.com/hLj9HL2.jpg')
-<a href="https://imgur.com/hLj9HL2"><img src="https://i.imgur.com/hLj9HL2.jpg" title="source: imgur.com" /></a>
+![image](./wireframe.jpeg)
 
 ## Would like to add
--Eventually, would like to enable functionality on multiple platforms (phone, iPad etc)
--Eventually, would like to add some more CSS
+- Eventually, would like to enable functionality on multiple platforms (phone, iPad etc)
+- Eventually, would like to add some more CSS
