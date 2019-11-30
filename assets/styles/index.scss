@@ -3,7 +3,7 @@
 
 body {
   width: 45%;
-  font-family: Indie Flower, cursive;
+  font-family: Indie Flower, cursive, 40px;
   background-color: #9A927C;
   text-align: center;
   margin: auto;
@@ -17,10 +17,10 @@ margin-left: 100px;
 
 
 .tic {
-  border: 2px solid black;
-/*  border-left-color: transparent;
+  border: 2px solid white;
+border-left-color: transparent;
   border-bottom-color: transparent;
-  border-top-color: transparent;*/
+  border-top-color: transparent;
   height: 100px;
   width: 35px;
   cursor: pointer;
