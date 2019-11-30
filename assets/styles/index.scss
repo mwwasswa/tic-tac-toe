@@ -3,7 +3,7 @@
 
 body {
   width: 45%;
-  font-family: Indie Flower, cursive, 40px;
+  font-family: Indie Flower, cursive, 20px;
   background-color: #9A927C;
   text-align: center;
   margin: auto;
@@ -18,12 +18,18 @@ margin-left: 100px;
 
 .tic {
   border: 2px solid white;
-border-left-color: transparent;
+/*  border-left-color: transparent;
   border-bottom-color: transparent;
-  border-top-color: transparent;
+  border-top-color: transparent;*/
   height: 100px;
   width: 35px;
   cursor: pointer;
+}
+
+#0.tic.col-4 {
+  border-top: none;
+  border-left: none;
+  padding: 30px;
 }
 
 .row#gameBoard {
