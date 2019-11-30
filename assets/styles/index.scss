@@ -3,8 +3,8 @@
 
 body {
   width: 45%;
-  font-family: Indie Flower, cursive, 20px;
-  background-color: #9A927C;
+  font-family: Indie Flower, cursive;
+  background-image: url('Background.jpg');
   text-align: center;
   margin: auto;
 
@@ -30,6 +30,7 @@ margin-left: 100px;
   border-top: none;
   border-left: none;
   padding: 30px;
+  font-size: 20px;
 }
 
 .row#gameBoard {
