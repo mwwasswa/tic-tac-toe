@@ -7,20 +7,12 @@ body {
   // background-image: '/public/Background.jpg';
   text-align: center;
   margin: auto;
-  background-color: grey;
+  background-color: black;
 }
 
 h1 {
 color: #ff0000;
 margin-left: 100px;
-}
-
-#game-notifications {
-  color: white;
-}
-
-#game-results {
-  color: white;
 }
 
 
@@ -32,11 +24,9 @@ margin-left: 100px;
   height: 100px;
   width: 35px;
   cursor: pointer;
-  border-bottom: none;
-  border-left: none;
 }
 
-  #0 {
+#0.tic.col-4 {
   border-top: none;
   border-left: none;
   padding: 30px;
