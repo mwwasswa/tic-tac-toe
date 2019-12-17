@@ -1,9 +1,12 @@
+$primary: orange;
+$secondary: grey;
+
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 body {
   width: 45%;
-  height: 900px;
+  min-height: 100vh;
   font-family: Indie Flower, cursive;
   background-image: url('public/gamebackground.jpg');
   background-size: cover;
@@ -11,11 +14,18 @@ body {
   text-align: center;
   margin: auto;
   // background-color: black;
+  padding-top: 1px;
 }
 
 button {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
 }
 
 h1 {
@@ -27,19 +37,33 @@ margin-bottom: 50px;
 font-size: 35px;
 }
 
+#game-notifications {
+  color: red;
+  font-size: 20px
+}
+
+#game-results {
+  color: green;
+  font-size: 30px
+}
+
+.game-history {
+  color: blue;
+  font-size: 20px
+}
 
 .tic {
   border: 2px solid #de6f00;
 /*  border-left-color: transparent;
   border-bottom-color: transparent;
   border-top-color: transparent;*/
-  height: 100px;
-  width: 35px;
+  // height: 100px;
+  // width: 35px;
   cursor: pointer;
-  padding: 30px;
-  // border-left: none;
-  // border-bottom: none;
-  font-size: 30px;
+  padding: 50px;
+  border-top: none;
+  border-left: none;
+  font-size: 40px;
 }
 
 .tic col-4,
@@ -50,7 +74,23 @@ font-size: 35px;
   font-size: 20px;
 }
 
+.tic:nth-child(3n) {
+  border-right: none;
+}
+
+.tic:nth-last-child(-1n + 3) {
+  border-bottom: none;
+}
+
+.tic:nth-last-child(-1n + 3) {
+  border-top: none;
+}
 
 .row#gameBoard {
   border-bottom-color: red;
+  max-width: 500px;
+  max-height: 500px;
+  height: 90vmin;
+  width: 90vmin;
+  margin: auto;
 }
