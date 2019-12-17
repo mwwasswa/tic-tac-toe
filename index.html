@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Tic-Tac-Toe!</h1>
+  </header>
+
+  <h2 id="message"></h2>
+  <form id='sign-up'>
+    <input type="email" name="credentials[email]" placeholder='Enter email...' required>
+    <input type="password" name="credentials[password]" placeholder='Enter password...' required>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+    <button id='singup' style class='btn btn-secondary'>Sign-Up</button>
+  </form>
+
+  <form id='sign-in'>
+    <input type="email" name="credentials[email]" placeholder='Enter email...'>
+    <input type="password" name="credentials[password]" placeholder='Enter password...'>
+    <button id='signin' style class='btn btn-secondary'>Sign-In</button>
+  </form>
+
+  <form id='change-password'>
+    <input type="password" name="passwords[old]" placeholder='Enter old password...'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <button id='changepassword' style class='btn btn-secondary'>Change-Password</button>
+  </form>
+
+  <form id='sign-out'>
+    <button id='signout' style class='btn btn-secondary'>Sign-out</button>
+  </form>
+
+  <button id='new-game' style class='btn btn-primary'>New-game</button>
+
+  <p id='game-notifications'></p>
+  <p id='game-results'></p>
+
+
+  <div class="row" id="gameBoard">
+    <div class="tic col-4" id="0"></div>
+    <div class="tic col-4" id="1"></div>
+    <div class="tic col-4" id="2"></div>
+    <div class="tic col-4" id="3"></div>
+    <div class="tic col-4" id="4"></div>
+    <div class="tic col-4" id="5"></div>
+    <div class="tic col-4" id="6"></div>
+    <div class="tic col-4" id="7"></div>
+    <div class="tic col-4" id="8"></div>
+  </div>
+  <footer>
+
+    <form id="game-records">
+      <button id='game-history' style class='btn btn-primary'>Game-history</button>
+      <div class='game-history'>
+    </form>
+    </div>
+
+  </footer>
+</body>
+
+</html>
